@@ -15,8 +15,7 @@ sendText(res, 404, "Not Found");
 }
 } catch (err) {
 const status = err.statusCode || 500;
-sendJson(res, status, { error: err.message || "Internal Server
-Error" });
+sendJson(res, status, { error: err.message || "Internal ServerError" });
 }
 });
 const PORT = process.env.PORT || 3000;
